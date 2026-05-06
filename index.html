@@ -1,0 +1,1262 @@
+        .brand-text{
+            display:flex;
+            flex-direction:column;
+        }
+
+        .brand-text span:first-child{
+            font-size:1rem;
+            font-weight:700;
+            letter-spacing:.1em;
+        }
+
+        .brand-text span:last-child{
+            font-size:.7rem;
+            text-transform:uppercase;
+            color:#facc15;
+        }
+
+        nav ul{
+            display:flex;
+            list-style:none;
+            gap:1rem;
+            font-size:.86rem;
+        }
+
+        nav li a{
+            padding:.3rem .7rem;
+            border-radius:999px;
+            color:var(--muted);
+            transition:.18s ease;
+        }
+
+        nav li a:hover{
+            color:#f9fafb;
+            background:rgba(148,163,184,0.16);
+        }
+
+        .nav-actions{
+            display:flex;
+            align-items:center;
+            gap:.6rem;
+        }
+
+        .btn-nav-outline,
+        .btn-nav-fill{
+            font-size:.8rem;
+            border-radius:999px;
+            padding:.35rem .9rem;
+            border:1px solid rgba(148,163,184,.6);
+            background:transparent;
+            color:#e5e7eb;
+            cursor:pointer;
+            display:inline-flex;
+            align-items:center;
+            gap:.25rem;
+            transition:.18s ease;
+        }
+
+        .btn-nav-fill{
+            border:none;
+            background:linear-gradient(to right,var(--orange-strong),#fb923c);
+            color:#111827;
+            font-weight:600;
+            box-shadow:0 6px 18px rgba(0,0,0,.6);
+        }
+
+        .btn-nav-outline:hover{
+            background:rgba(148,163,184,.15);
+        }
+
+        .btn-nav-fill:hover{
+            transform:translateY(-1px);
+            box-shadow:0 10px 24px rgba(0,0,0,.7);
+        }
+
+        /* HERO */
+        .hero{
+            position:relative;
+            overflow:hidden;
+            border-bottom:1px solid rgba(31,41,55,.8);
+        }
+
+        .hero::before{
+            content:"";
+            position:absolute;
+            inset:-40%;
+            background:
+                radial-gradient(circle at 10% 0%,rgba(244,114,182,.35),transparent 55%),
+                radial-gradient(circle at 80% 10%,rgba(59,130,246,.45),transparent 55%),
+                radial-gradient(circle at 40% 80%,rgba(248,250,252,.13),transparent 50%);
+            opacity:.8;
+            pointer-events:none;
+        }
+
+        .hero-inner{
+            position:relative;
+            max-width:1200px;
+            margin:0 auto;
+            padding:3.4rem 1.3rem 3.6rem;
+            display:grid;
+            grid-template-columns:minmax(0,1.1fr) minmax(0,.95fr);
+            gap:2.6rem;
+            align-items:center;
+        }
+
+        .hero-tag{
+            display:inline-flex;
+            align-items:center;
+            gap:.4rem;
+            padding:.25rem .7rem;
+            border-radius:999px;
+            border:1px solid rgba(148,163,184,.4);
+            background:rgba(15,23,42,.7);
+            box-shadow:0 4px 14px rgba(0,0,0,.9);
+            font-size:.75rem;
+            color:#e5e7eb;
+            margin-bottom:.9rem;
+        }
+
+        .hero-tag span{
+            width:6px;
+            height:6px;
+            border-radius:999px;
+            background:#22c55e;
+        }
+
+        .hero h1{
+            font-size:clamp(2.1rem,3.4vw,2.7rem);
+            letter-spacing:.04em;
+            text-transform:uppercase;
+            margin-bottom:.5rem;
+        }
+
+        .hero h1 span{
+            color:#fed7aa;
+        }
+
+        .hero-subtitle{
+            font-size:.95rem;
+            color:#e5e7eb;
+            max-width:520px;
+            margin-bottom:1.1rem;
+        }
+
+        .hero-badges{
+            display:flex;
+            flex-wrap:wrap;
+            gap:.5rem;
+            margin-bottom:1.2rem;
+            font-size:.78rem;
+        }
+
+        .hero-badge{
+            padding:.25rem .65rem;
+            border-radius:999px;
+            border:1px solid rgba(148,163,184,.55);
+            background:rgba(15,23,42,.8);
+        }
+
+        .hero-cta{
+            display:flex;
+            flex-wrap:wrap;
+            gap:.7rem;
+            align-items:center;
+            margin-bottom:.7rem;
+        }
+
+        .btn-primary{
+            padding:.6rem 1.4rem;
+            border-radius:999px;
+            border:none;
+            cursor:pointer;
+            background:linear-gradient(to right,var(--orange-strong),#fb923c);
+            color:#111827;
+            font-size:.9rem;
+            font-weight:600;
+            display:inline-flex;
+            align-items:center;
+            gap:.4rem;
+            box-shadow:0 8px 22px rgba(0,0,0,.9);
+            transition:.18s ease;
+        }
+
+        .btn-primary:hover{
+            transform:translateY(-2px);
+            box-shadow:0 14px 32px rgba(0,0,0,.95);
+        }
+
+        .btn-ghost{
+            padding:.55rem 1.3rem;
+            border-radius:999px;
+            border:1px solid rgba(148,163,184,.6);
+            background:rgba(15,23,42,.6);
+            font-size:.85rem;
+            color:#e5e7eb;
+            display:inline-flex;
+            align-items:center;
+            gap:.3rem;
+            cursor:pointer;
+            transition:.18s ease;
+        }
+
+        .btn-ghost:hover{
+            background:rgba(148,163,184,.18);
+        }
+
+        .hero-note{
+            font-size:.78rem;
+            color:var(--muted);
+        }
+
+        .hero-search{
+            margin-top:1.2rem;
+            max-width:460px;
+            background:rgba(15,23,42,.9);
+            border-radius:999px;
+            border:1px solid rgba(148,163,184,.55);
+            display:flex;
+            align-items:center;
+            padding:.15rem .25rem .15rem .75rem;
+            box-shadow:0 8px 22px rgba(0,0,0,.9);
+        }
+
+        .hero-search input{
+            flex:1;
+            background:transparent;
+            border:none;
+            outline:none;
+            color:#f9fafb;
+            font-size:.82rem;
+            padding:.35rem 0;
+        }
+
+        .hero-search button{
+            padding:.45rem 1.1rem;
+            border-radius:999px;
+            border:none;
+            cursor:pointer;
+            background:rgba(248,250,252,.9);
+            font-size:.8rem;
+            font-weight:600;
+            color:#111827;
+        }
+
+        .hero-pills{
+            display:flex;
+            flex-wrap:wrap;
+            gap:.4rem;
+            margin-top:.5rem;
+            font-size:.72rem;
+        }
+
+        .hero-pill{
+            padding:.16rem .6rem;
+            border-radius:999px;
+            background:rgba(15,23,42,.85);
+            border:1px solid rgba(148,163,184,.5);
+        }
+
+        .hero-card{
+            background:radial-gradient(circle at top,var(--kraft-soft),#fef9c3 50%,#f5e0b8);
+            color:#111827;
+            border-radius:24px;
+            padding:1.4rem 1.5rem 1.2rem;
+            box-shadow:0 14px 36px rgba(0,0,0,.9);
+            border:1px solid rgba(15,23,42,.7);
+        }
+
+        .hero-card-header{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            margin-bottom:.7rem;
+        }
+
+        .hero-card-header h2{
+            font-size:1rem;
+            text-transform:uppercase;
+            letter-spacing:.08em;
+        }
+
+        .hero-card-header span{
+            font-size:.7rem;
+            background:#111827;
+            color:#facc15;
+            padding:.2rem .6rem;
+            border-radius:999px;
+        }
+
+        .hero-card-grid{
+            display:grid;
+            grid-template-columns:repeat(2,minmax(0,1fr));
+            gap:.65rem;
+            font-size:.78rem;
+        }
+
+        .hero-card-box{
+            background:#ffffff;
+            border-radius:14px;
+            padding:.55rem .6rem;
+            border:1px solid rgba(15,23,42,.07);
+        }
+
+        .hero-card-box strong{
+            font-size:.8rem;
+            color:#111827;
+        }
+
+        .hero-card-footer{
+            margin-top:.7rem;
+            font-size:.72rem;
+            display:flex;
+            justify-content:space-between;
+            color:#374151;
+        }
+
+        /* SECCIONES */
+        section{
+            padding:3.4rem 1.3rem;
+        }
+
+        .section-inner{
+            max-width:1200px;
+            margin:0 auto;
+        }
+
+        .section-title{
+            font-size:1.4rem;
+            text-transform:uppercase;
+            letter-spacing:.1em;
+            margin-bottom:.3rem;
+        }
+
+        .section-subtitle{
+            font-size:.9rem;
+            color:var(--muted);
+            margin-bottom:1.5rem;
+        }
+
+        .divider{
+            width:70px;
+            height:3px;
+            border-radius:999px;
+            background:linear-gradient(to right,var(--orange-strong),#fb923c);
+            margin-bottom:1.3rem;
+        }
+
+        /* PRODUCTO */
+        .producto-grid{
+            display:grid;
+            grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);
+            gap:2.2rem;
+            align-items:flex-start;
+        }
+
+        .producto-text p{
+            font-size:.9rem;
+            color:#e5e7eb;
+            margin-bottom:.8rem;
+        }
+
+        .list-check{
+            list-style:none;
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+            gap:.45rem 1rem;
+            font-size:.84rem;
+            color:#e5e7eb;
+        }
+
+        .list-check li::before{
+            content:"✔";
+            margin-right:.35rem;
+            color:var(--orange);
+            font-weight:700;
+        }
+
+        .spec-card{
+            background:rgba(15,23,42,.92);
+            border-radius:18px;
+            padding:1.1rem 1.2rem;
+            border:1px solid var(--border-soft);
+            box-shadow:0 10px 26px rgba(0,0,0,.9);
+            font-size:.8rem;
+        }
+
+        /* AQUÍ YA SIN LAS LÍNEAS */
+        .spec-row{
+            display:flex;
+            justify-content:space-between;
+            padding:.22rem 0;
+        }
+
+        .spec-note{
+            margin-top:.5rem;
+            color:var(--muted);
+            font-size:.72rem;
+        }
+
+        /* HISTORIA */
+        .historia-grid{
+            display:grid;
+            grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);
+            gap:2rem;
+            align-items:center;
+        }
+
+        .historia-box{
+            background:linear-gradient(to bottom right,rgba(15,23,42,.9),rgba(15,23,42,.7));
+            border-radius:20px;
+            border:1px solid var(--border-soft);
+            padding:1.2rem 1.3rem;
+            font-size:.88rem;
+            box-shadow:0 10px 26px rgba(0,0,0,.9);
+        }
+
+        .historia-box p{margin-bottom:.6rem}
+
+        .historia-highlight{
+            margin-top:.6rem;
+            padding:.55rem .85rem;
+            border-radius:14px;
+            background:rgba(248,250,252,.05);
+            border:1px dashed rgba(248,250,252,.18);
+            font-size:.8rem;
+        }
+
+        .historia-image{
+            border-radius:22px;
+            overflow:hidden;
+            box-shadow:0 14px 32px rgba(0,0,0,.9);
+            border:1px solid rgba(15,23,42,.85);
+        }
+
+        .historia-image img{
+            display:block;
+            width:100%;
+            height:auto;
+        }
+
+        /* BENEFICIOS */
+        .beneficios-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+            gap:1.4rem;
+        }
+
+        .beneficio-card{
+            background:radial-gradient(circle at top,#111827,#020617 70%);
+            border-radius:18px;
+            padding:1rem 1.1rem;
+            border:1px solid var(--border-soft);
+            box-shadow:0 8px 22px rgba(0,0,0,.9);
+            font-size:.84rem;
+        }
+
+        .beneficio-icon{
+            width:32px;
+            height:32px;
+            border-radius:12px;
+            background:linear-gradient(to bottom right,#fb923c,#facc15);
+            color:#111827;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            margin-bottom:.4rem;
+        }
+
+        .beneficio-title{
+            font-size:.95rem;
+            font-weight:600;
+            margin-bottom:.25rem;
+        }
+
+        /* PRESENTACIONES */
+        .presentaciones-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:1.3rem;
+        }
+
+        .presentacion-card{
+            background:linear-gradient(to bottom,#fef9c3,#f5e0b8);
+            color:#111827;
+            border-radius:18px;
+            padding:1rem 1.1rem;
+            border:1px solid rgba(15,23,42,.7);
+            box-shadow:0 10px 26px rgba(0,0,0,.9);
+            font-size:.84rem;
+        }
+
+        .presentacion-header{
+            display:flex;
+            justify-content:space-between;
+            align-items:baseline;
+            margin-bottom:.4rem;
+        }
+
+        .presentacion-header h3{
+            font-size:1.05rem;
+        }
+
+        .chip{
+            font-size:.7rem;
+            padding:.15rem .6rem;
+            border-radius:999px;
+            background:#111827;
+            color:#fde68a;
+        }
+
+        .price{
+            font-weight:700;
+            color:#b91c1c;
+            margin:.26rem 0;
+        }
+
+        .pill-row{
+            display:flex;
+            flex-wrap:wrap;
+            gap:.3rem;
+            margin-top:.35rem;
+        }
+
+        .pill{
+            font-size:.7rem;
+            padding:.16rem .5rem;
+            border-radius:999px;
+            background:rgba(15,23,42,.07);
+        }
+
+        .presentacion-image{
+            margin-top:.6rem;
+            border-radius:14px;
+            overflow:hidden;
+            border:1px solid rgba(15,23,42,.25);
+        }
+
+        .presentacion-image img{
+            display:block;
+            width:100%;
+            height:auto;
+        }
+
+        /* USO */
+        .uso-grid{
+            display:grid;
+            grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);
+            gap:2rem;
+        }
+
+        .pasos-lista{
+            list-style:none;
+            font-size:.84rem;
+        }
+
+        .pasos-lista li{
+            margin-bottom:.65rem;
+        }
+
+        .pasos-lista span{
+            display:inline-block;
+            width:22px;
+            height:22px;
+            border-radius:999px;
+            background:var(--orange-strong);
+            color:#111827;
+            font-size:.72rem;
+            font-weight:700;
+            text-align:center;
+            line-height:22px;
+            margin-right:.35rem;
+        }
+
+        .uso-box{
+            background:radial-gradient(circle at top,#111827,#020617);
+            border-radius:18px;
+            padding:1rem 1.1rem;
+            border:1px solid var(--border-soft);
+            font-size:.8rem;
+            box-shadow:0 8px 22px rgba(0,0,0,.95);
+        }
+
+        .uso-box-title{
+            font-weight:600;
+            margin-bottom:.4rem;
+        }
+
+        .uso-tags{
+            display:flex;
+            flex-wrap:wrap;
+            gap:.35rem;
+            margin-top:.4rem;
+        }
+
+        .uso-tag{
+            font-size:.7rem;
+            padding:.15rem .5rem;
+            border-radius:999px;
+            background:rgba(148,163,184,.12);
+            border:1px solid rgba(148,163,184,.4);
+        }
+
+        /* CLIENTES (LOGIN/REGISTRO) */
+        .clientes-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+            gap:1.5rem;
+        }
+
+        .cliente-card{
+            background:radial-gradient(circle at top,#111827,#020617 70%);
+            border-radius:20px;
+            padding:1.1rem 1.2rem 1.2rem;
+            border:1px solid var(--border-soft);
+            box-shadow:0 10px 26px rgba(0,0,0,.95);
+            font-size:.84rem;
+        }
+
+        .cliente-card h3{
+            font-size:.98rem;
+            margin-bottom:.5rem;
+        }
+
+        .cliente-card p{
+            font-size:.82rem;
+            color:var(--muted);
+            margin-bottom:.7rem;
+        }
+
+        .campo{
+            margin-bottom:.55rem;
+        }
+
+        .campo label{
+            display:block;
+            font-size:.74rem;
+            margin-bottom:.18rem;
+            color:var(--muted);
+        }
+
+        .campo input,
+        .campo select{
+            width:100%;
+            padding:.4rem .55rem;
+            border-radius:10px;
+            border:1px solid rgba(148,163,184,.7);
+            background:rgba(15,23,42,.9);
+            color:#f9fafb;
+            font-size:.78rem;
+            outline:none;
+        }
+
+        .cliente-card button{
+            margin-top:.4rem;
+            width:100%;
+        }
+
+        .cliente-note{
+            font-size:.74rem;
+            color:var(--muted);
+            margin-top:.4rem;
+        }
+
+        /* CONTACTO */
+        .contacto-grid{
+            display:grid;
+            grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);
+            gap:2rem;
+        }
+
+        .contact-list{
+            list-style:none;
+            font-size:.85rem;
+            margin-top:.6rem;
+        }
+
+        .contact-list li{margin-bottom:.4rem}
+
+        .btn-whatsapp{
+            display:inline-flex;
+            align-items:center;
+            gap:.4rem;
+            padding:.6rem 1.4rem;
+            border-radius:999px;
+            background:#22c55e;
+            color:#052e16;
+            font-size:.9rem;
+            font-weight:600;
+            margin-top:.7rem;
+            border:none;
+            cursor:pointer;
+            box-shadow:0 10px 26px rgba(0,0,0,.9);
+            transition:.18s ease;
+        }
+
+        .btn-whatsapp:hover{
+            transform:translateY(-2px);
+            box-shadow:0 14px 32px rgba(0,0,0,.95);
+            background:#16a34a;
+        }
+
+        .contacto-form{
+            background:radial-gradient(circle at top,#111827,#020617 70%);
+            border-radius:20px;
+            padding:1.2rem 1.3rem;
+            border:1px solid var(--border-soft);
+            box-shadow:0 10px 26px rgba(0,0,0,.95);
+            font-size:.84rem;
+        }
+
+        .contacto-form-row{
+            display:flex;
+            gap:.7rem;
+        }
+
+        .contacto-form label{
+            display:block;
+            font-size:.74rem;
+            margin-bottom:.18rem;
+            color:var(--muted);
+        }
+
+        .contacto-form input,
+        .contacto-form textarea{
+            width:100%;
+            padding:.4rem .55rem;
+            border-radius:10px;
+            border:1px solid rgba(148,163,184,.7);
+            background:rgba(15,23,42,.9);
+            color:#f9fafb;
+            font-size:.78rem;
+            font-family:inherit;
+        }
+
+        .contacto-form textarea{
+            resize:vertical;
+            min-height:90px;
+        }
+
+        footer{
+            border-top:1px solid rgba(31,41,55,.9);
+            background:#020617;
+            color:var(--muted);
+            font-size:.75rem;
+            padding:1rem 1.3rem 1.2rem;
+        }
+
+        .footer-inner{
+            max-width:1200px;
+            margin:0 auto;
+            display:flex;
+            flex-wrap:wrap;
+            gap:.6rem;
+            align-items:center;
+            justify-content:space-between;
+        }
+
+        @media(max-width:900px){
+            .hero-inner,
+            .producto-grid,
+            .historia-grid,
+            .uso-grid,
+            .contacto-grid{
+                grid-template-columns:1fr;
+            }
+            nav ul{display:none}
+            .hero-inner{padding-top:2.6rem}
+        }
+
+        @media(max-width:600px){
+            section{padding:2.6rem 1rem}
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="nav">
+        <div class="brand">
+            <div class="brand-logo">EC</div>
+            <div class="brand-text">
+                <span>ENCONCRETO</span>
+                <span>Fuerza que construye Veracruz</span>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#producto">Producto</a></li>
+                <li><a href="#presentaciones">Catálogo</a></li>
+                <li><a href="#clientes">Clientes</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="nav-actions">
+            <button class="btn-nav-outline" data-scroll="#clientes">Login</button>
+            <button class="btn-nav-fill" data-scroll="#clientes">Soy cliente nuevo</button>
+        </div>
+    </div>
+</header>
+
+<main>
+
+    <!-- HERO -->
+    <section id="inicio" class="hero">
+        <div class="hero-inner">
+            <div>
+                <div class="hero-tag">
+                    <span></span> Rápido · Fácil · enConcreto
+                </div>
+                <h1>Cemento premezclado en seco <span>100 % veracruzano</span></h1>
+                <p class="hero-subtitle">
+                    Enconcreto es el concreto inteligente para reparaciones, aplanados y pequeños proyectos. 
+                    Olvídate de mezclar “al tanteo”: solo agrega agua, mezcla y construye.
+                </p>
+                <div class="hero-badges">
+                    <div class="hero-badge">Presentaciones 5 kg y 10 kg</div>
+                    <div class="hero-badge">Uso interior y exterior</div>
+                    <div class="hero-badge">Patente en trámite</div>
+                </div>
+                <div class="hero-cta">
+                    <button class="btn-primary" data-scroll="#presentaciones">
+                        Ver catálogo de bultos →
+                    </button>
+                    <button class="btn-ghost" data-scroll="#clientes">
+                        Acceder como cliente
+                    </button>
+                </div>
+                <p class="hero-note">
+                    Tip: cambia después el número de WhatsApp y la zona de atención por tus datos reales.
+                </p>
+
+                <div class="hero-search">
+                    <input type="text" placeholder="¿Qué quieres construir hoy? Reparación de losa, muro, piso…">
+                    <button type="button">Buscar solución</button>
+                </div>
+                <div class="hero-pills">
+                    <div class="hero-pill">Reparar grietas</div>
+                    <div class="hero-pill">Colocar postería</div>
+                    <div class="hero-pill">Aplanar muros</div>
+                    <div class="hero-pill">Nivelar pisos</div>
+                </div>
+            </div>
+
+            <aside class="hero-card">
+                <div class="hero-card-header">
+                    <h2>Ficha rápida</h2>
+                    <span>Hecho en Veracruz</span>
+                </div>
+                <div class="hero-card-grid">
+                    <div class="hero-card-box">
+                        <strong>Producto</strong>
+                        <p>Cemento premezclado en seco listo para usar, solo agrega agua.</p>
+                    </div>
+                    <div class="hero-card-box">
+                        <strong>Resistencia</strong>
+                        <p>f’c 300 kg/cm² para reparaciones y trabajos generales.</p>
+                    </div>
+                    <div class="hero-card-box">
+                        <strong>Presentaciones</strong>
+                        <p>Bultos de 5 kg y 10 kg pensados para proyectos pequeños y medianos.</p>
+                    </div>
+                    <div class="hero-card-box">
+                        <strong>Sustentable</strong>
+                        <p>Menos desperdicio de materiales y menor generación de residuos.</p>
+                    </div>
+                </div>
+                <div class="hero-card-footer">
+                    <span>Probado en diferentes obras reales</span>
+                    <span>Proyecto universitario veracruzano</span>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <!-- PRODUCTO -->
+    <section id="producto">
+        <div class="section-inner">
+            <h2 class="section-title">¿Qué es Enconcreto?</h2>
+            <div class="divider"></div>
+            <div class="producto-grid">
+                <div class="producto-text">
+                    <p>
+                        Enconcreto es un cemento premezclado en seco que combina cemento, arena y grava en
+                        proporciones exactas para que obtengas una mezcla de calidad profesional sin complicaciones.
+                    </p>
+                    <p>
+                        Está diseñado para quienes necesitan soluciones rápidas y limpias: propietarios de vivienda,
+                        maestros de obra, ferreterías y cualquier persona que quiera construir sin tener que
+                        pedir revolvedora ni comprar materiales por separado.
+                    </p>
+                    <p><strong>Ventajas clave:</strong></p>
+                    <ul class="list-check">
+                        <li>Porciones pequeñas que evitan desperdicio de material.</li>
+                        <li>Calidad constante en cada bulto, sin mezclar “a ojo”.</li>
+                        <li>Fácil de transportar en auto, moto o incluso caminando.</li>
+                        <li>Preparación sencilla: vacía, agrega agua, mezcla y usa.</li>
+                    </ul>
+                </div>
+                <aside class="spec-card">
+                    <h3 style="font-size:.96rem;margin-bottom:.55rem;letter-spacing:.09em;text-transform:uppercase;">Especificaciones técnicas</h3>
+                    <div class="spec-row">
+                        <span>Tipo de producto</span>
+                        <span>Cemento premezclado en seco</span>
+                    </div>
+                    <div class="spec-row">
+                        <span>Presentaciones</span>
+                        <span>5 kg y 10 kg</span>
+                    </div>
+                    <div class="spec-row">
+                        <span>Resistencia de diseño</span>
+                        <span>f’c 300 kg/cm²</span>
+                    </div>
+                    <div class="spec-row">
+                        <span>Uso</span>
+                        <span>Interiores y exteriores</span>
+                    </div>
+                    <div class="spec-row">
+                        <span>Preparación</span>
+                        <span>Solo agrega agua limpia</span>
+                    </div>
+                    <div class="spec-row">
+                        <span>Normatividad</span>
+                        <span>De acuerdo con 083‑ONNCCE‑2020</span>
+                    </div>
+                    <p class="spec-note">
+                        Para elementos estructurales mayores, consulta siempre a un ingeniero civil
+                        y las normas locales aplicables.
+                    </p>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- HISTORIA -->
+    <section id="historia">
+        <div class="section-inner">
+            <h2 class="section-title">Historia y propósito</h2>
+            <div class="divider"></div>
+
+            <div class="historia-grid">
+                <div class="historia-box">
+                    <p>
+                        Enconcreto nació en Veracruz como una propuesta de estudiantes e ingenieros que
+                        observaron un problema cotidiano: para muchas reparaciones pequeñas, el concreto tradicional
+                        era costoso y poco práctico de conseguir.
+                    </p>
+                    <p>
+                        La solución fue crear un concreto premezclado en seco, empacado en bultos ligeros,
+                        que cualquier persona pudiera usar en casa u obra sin equipamiento especial.
+                    </p>
+                    <p>
+                        Hoy Enconcreto sigue creciendo como un producto 100 % veracruzano, que impulsa la economía
+                        local y facilita el mantenimiento de miles de viviendas.
+                    </p>
+                    <div class="historia-highlight">
+                        Hecho para quienes construyen todos los días: desde el maestro de obra hasta la familia
+                        que quiere mantener su casa en buen estado sin complicarse.
+                    </div>
+                </div>
+                <div class="historia-image">
+                    <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/3455f930-4d95-4dc3-a907-d376720e9a5e" alt="Presentaciones de Enconcreto 10 kg y 5 kg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BENEFICIOS -->
+    <section id="beneficios">
+        <div class="section-inner">
+            <h2 class="section-title">Beneficios para ti</h2>
+            <div class="divider"></div>
+            <p class="section-subtitle">
+                Pensado para que ahorrar tiempo, dinero y esfuerzo sea parte natural de tu forma de construir.
+            </p>
+
+            <div class="beneficios-grid">
+                <article class="beneficio-card">
+                    <div class="beneficio-icon">💧</div>
+                    <div class="beneficio-title">Solo agrega agua</div>
+                    <p>La mezcla viene dosificada; solo agregas agua limpia hasta lograr la consistencia deseada.</p>
+                </article>
+                <article class="beneficio-card">
+                    <div class="beneficio-icon">📦</div>
+                    <div class="beneficio-title">Fácil de transportar</div>
+                    <p>Bultos ligeros de 5 kg y 10 kg que puedes mover sin esfuerzo y sin necesidad de camioneta.</p>
+                </article>
+                <article class="beneficio-card">
+                    <div class="beneficio-icon">💰</div>
+                    <div class="beneficio-title">Control de costos</div>
+                    <p>Compras exactamente la cantidad que necesitas, reduces desperdicio y cuidas tu presupuesto.</p>
+                </article>
+                <article class="beneficio-card">
+                    <div class="beneficio-icon">🌎</div>
+                    <div class="beneficio-title">Más sustentable</div>
+                    <p>Al generar menos residuos de construcción, ayudas a mantener tu obra y tu ciudad más limpia.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRESENTACIONES -->
+    <section id="presentaciones">
+        <div class="section-inner">
+            <h2 class="section-title">Catálogo de presentaciones</h2>
+            <div class="divider"></div>
+            <p class="section-subtitle">
+                Ajusta los precios según tus costos de producción y tu mercado local. Aquí tienes una guía de referencia.
+            </p>
+
+            <div class="presentaciones-grid">
+                <article class="presentacion-card">
+                    <div class="presentacion-header">
+                        <h3>Bulto de 5 kg</h3>
+                        <span class="chip">Para reparaciones pequeñas</span>
+                    </div>
+                    <p class="price">$90.00 MXN (precio sugerido)</p>
+                    <p>
+                        Ideal para resanar muros, reparar pequeñas losas, fijar postes y trabajos rápidos
+                        de mantenimiento en casa.
+                    </p>
+                    <div class="pill-row">
+                        <div class="pill">Alta rotación</div>
+                        <div class="pill">Perfecto para ferreterías</div>
+                    </div>
+                    <div class="presentacion-image">
+                        <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/b8d03db9-4a93-47bf-9f67-8568f5aeae0f" alt="Empaque 5 kg Enconcreto">
+                    </div>
+                </article>
+
+                <article class="presentacion-card">
+                    <div class="presentacion-header">
+                        <h3>Bulto de 10 kg</h3>
+                        <span class="chip">Para trabajos medianos</span>
+                    </div>
+                    <p class="price">$150.00 MXN (precio sugerido)</p>
+                    <p>
+                        Perfecto para aplanados más amplios, colado de pequeñas losas, banquetas,
+                        y trabajos donde necesitas un poco más de volumen.
+                    </p>
+                    <div class="pill-row">
+                        <div class="pill">Mayor utilidad por pieza</div>
+                        <div class="pill">Excelente para cuadrillas</div>
+                    </div>
+                    <div class="presentacion-image">
+                        <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/3455f930-4d95-4dc3-a907-d376720e9a5e" alt="Empaque 10 kg Enconcreto">
+                    </div>
+                </article>
+
+                <article class="presentacion-card">
+                    <div class="presentacion-header">
+                        <h3>Venta a negocio</h3>
+                        <span class="chip">Ferreterías y autoservicio</span>
+                    </div>
+                    <p>
+                        Enconcreto se adapta perfecto a exhibidores en ferreterías, tlapalerías y tiendas
+                        de autoservicio como una solución lista para llevar.
+                    </p>
+                    <div class="pill-row">
+                        <div class="pill">Imagen profesional</div>
+                        <div class="pill">Código de barras</div>
+                        <div class="pill">Producto 100 % veracruzano</div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- USO -->
+    <section id="uso">
+        <div class="section-inner">
+            <h2 class="section-title">Cómo usar Enconcreto</h2>
+            <div class="divider"></div>
+
+            <div class="uso-grid">
+                <div>
+                    <ol class="pasos-lista">
+                        <li><span>1</span> Limpia la superficie retirando polvo, grasa y partes sueltas.</li>
+                        <li><span>2</span> Vacía el contenido del bulto en un recipiente limpio.</li>
+                        <li><span>3</span> Agrega poco a poco agua limpia hasta obtener una mezcla homogénea.</li>
+                        <li><span>4</span> Coloca el concreto donde lo necesites, compacta y nivela.</li>
+                        <li><span>5</span> Deja fraguar sin mover ni pisar el área hasta que endurezca.</li>
+                        <li><span>6</span> Mantén la superficie ligeramente húmeda para un mejor curado.</li>
+                    </ol>
+                </div>
+                <aside class="uso-box">
+                    <div class="uso-box-title">Aplicaciones recomendadas</div>
+                    <p>Enconcreto está pensado para:</p>
+                    <div class="uso-tags">
+                        <div class="uso-tag">Reparación de losas</div>
+                        <div class="uso-tag">Aplanado de muros</div>
+                        <div class="uso-tag">Relleno de oquedades</div>
+                        <div class="uso-tag">Colocación de postería</div>
+                        <div class="uso-tag">Ocultar tuberías</div>
+                        <div class="uso-tag">Instalación de lavabos</div>
+                    </div>
+                    <p style="margin-top:.6rem;">
+                        Para elementos estructurales importantes, consulta siempre a un profesional
+                        de la construcción.
+                    </p>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- CLIENTES (LOGIN / REGISTRO) -->
+    <section id="clientes">
+        <div class="section-inner">
+            <h2 class="section-title">Área de clientes</h2>
+            <div class="divider"></div>
+            <p class="section-subtitle">
+                Aquí puedes simular el inicio de sesión de clientes frecuentes o el registro de nuevos clientes.
+                Más adelante lo puedes conectar a una base de datos o a tu sistema.
+            </p>
+
+            <div class="clientes-grid">
+                <!-- LOGIN -->
+                <article class="cliente-card">
+                    <h3>Ya soy cliente</h3>
+                    <p>Inicia sesión para consultar tus pedidos, ver precios especiales y repetir compras.</p>
+                    <form id="loginForm">
+                        <div class="campo">
+                            <label for="loginCorreo">Correo electrónico</label>
+                            <input type="email" id="loginCorreo" placeholder="cliente@ejemplo.com" required>
+                        </div>
+                        <div class="campo">
+                            <label for="loginPassword">Contraseña</label>
+                            <input type="password" id="loginPassword" placeholder="Tu contraseña" required>
+                        </div>
+                        <button type="submit" class="btn-primary">Entrar a mi cuenta</button>
+                        <p class="cliente-note">Demo: por ahora solo muestra un mensaje en pantalla.</p>
+                    </form>
+                </article>
+
+                <!-- REGISTRO -->
+                <article class="cliente-card">
+                    <h3>Soy cliente nuevo</h3>
+                    <p>Regístrate para recibir cotizaciones personalizadas y promociones para tu obra o ferretería.</p>
+                    <form id="registroForm">
+                        <div class="campo">
+                            <label for="regNombre">Nombre completo</label>
+                            <input type="text" id="regNombre" placeholder="Nombre y apellidos" required>
+                        </div>
+                        <div class="campo">
+                            <label for="regTipo">Tipo de cliente</label>
+                            <select id="regTipo" required>
+                                <option value="">Selecciona una opción</option>
+                                <option value="hogar">Dueño de casa</option>
+                                <option value="maestro">Maestro de obra</option>
+                                <option value="ferreteria">Ferretería / Distribuidor</option>
+                            </select>
+                        </div>
+                        <div class="campo">
+                            <label for="regTelefono">Teléfono / WhatsApp</label>
+                            <input type="tel" id="regTelefono" placeholder="+52 ..." required>
+                        </div>
+                        <div class="campo">
+                            <label for="regCorreo">Correo electrónico</label>
+                            <input type="email" id="regCorreo" placeholder="tucorreo@ejemplo.com">
+                        </div>
+                        <button type="submit" class="btn-primary">Registrarme</button>
+                        <p class="cliente-note">
+                            Demo: al enviar verás un mensaje de “registro exitoso”; después puedes conectar esto a una base de datos real.
+                        </p>
+                    </form>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto">
+        <div class="section-inner">
+            <h2 class="section-title">Contacto y pedidos</h2>
+            <div class="divider"></div>
+
+            <div class="contacto-grid">
+                <div>
+                    <p>
+                        ¿Quieres distribuir Enconcreto, cotizar para tu obra o hacer un pedido especial?
+                        Escríbenos y con gusto te asesoramos.
+                    </p>
+                    <ul class="contact-list">
+                        <li><strong>Teléfono / WhatsApp:</strong> +52 1 000 000 0000</li>
+                        <li><strong>Correo:</strong> ventas@enconcreto.mx</li>
+                        <li><strong>Zona de atención:</strong> Veracruz y región (modifícalo a tu ciudad)</li>
+                    </ul>
+
+                    <button class="btn-whatsapp" onclick="window.open('https://wa.me/5210000000000?text=Hola,%20quiero%20informes%20sobre%20Enconcreto','_blank')">
+                        Pedir cotización por WhatsApp
+                    </button>
+
+                    <p style="font-size:.78rem;color:var(--muted);margin-top:.7rem;">
+                        Tip: cambia el número, correo y zona de atención por tus datos reales antes de publicar la página.
+                    </p>
+                </div>
+
+                <form class="contacto-form" id="contactoForm">
+                    <p style="font-size:.8rem;margin-bottom:.6rem;color:var(--muted);">
+                        Este formulario es de ejemplo. Si subes el sitio a un hosting,
+                        puedes conectarlo a tu correo o a un sistema de CRM.
+                    </p>
+                    <div class="contacto-form-row">
+                        <div style="flex:1;">
+                            <label for="conNombre">Nombre</label>
+                            <input type="text" id="conNombre" placeholder="Nombre completo">
+                        </div>
+                        <div style="flex:1;">
+                            <label for="conTel">Teléfono</label>
+                            <input type="tel" id="conTel" placeholder="Teléfono o WhatsApp">
+                        </div>
+                    </div>
+                    <label for="conMensaje" style="margin-top:.6rem;display:block;">Mensaje</label>
+                    <textarea id="conMensaje" placeholder="Cuéntanos qué proyecto quieres hacer con Enconcreto"></textarea>
+                    <button type="submit" class="btn-primary" style="margin-top:.7rem;">Enviar mensaje (demo)</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="footer-inner">
+        <span>ENCONCRETO · Cemento premezclado en seco · Producto 100 % veracruzano</span>
+        <span>Sitio demo para presentación y ventas locales. Personaliza textos y datos de contacto.</span>
+    </div>
+</footer>
+
+<script>
+    // Scroll suave para botones con data-scroll
+    document.querySelectorAll('[data-scroll]').forEach(function(btn){
+        btn.addEventListener('click',function(){
+            var target = document.querySelector(this.getAttribute('data-scroll'));
+            if(target){
+                target.scrollIntoView({behavior:'smooth'});
+            }
+        });
+    });
+
+    // Login demo
+    document.getElementById('loginForm').addEventListener('submit',function(e){
+        e.preventDefault();
+        alert('Inicio de sesión demo: aquí podrías validar al cliente en tu sistema.');
+    });
+
+    // Registro demo
+    document.getElementById('registroForm').addEventListener('submit',function(e){
+        e.preventDefault();
+        alert('Registro enviado. En una versión real guardarías estos datos en tu base de datos.');
+        this.reset();
+    });
+
+    // Contacto demo
+    document.getElementById('contactoForm').addEventListener('submit',function(e){
+        e.preventDefault();
+        alert('Mensaje enviado (demo). Después puedes conectar este formulario a tu correo.');
+        this.reset();
+    });
+</script>
+
+</body>
+</html>
